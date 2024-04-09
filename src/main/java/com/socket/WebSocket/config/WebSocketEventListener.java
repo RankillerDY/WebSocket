@@ -27,6 +27,8 @@ public class WebSocketEventListener {
                     .type(MessageType.LEAVE)
                     .sender(username)
                     .build();
+            //This message template help convert and send the payload to the socket destination
+            //Help alert other users that there is someone left
             messageTemplate.convertAndSend("/topic/public", chatMessage);
         }
     }
